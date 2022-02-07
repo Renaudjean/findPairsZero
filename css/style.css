@@ -1,0 +1,418 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #000000;
+}
+
+/* All components used in header is here */
+#topBar, #bottomBar {
+  position: relative;
+  display:flex;
+  height: 80px;
+  background: #000000;
+}
+
+#topBar{
+  margin: 0 0 20px;
+}
+#bottomBar {
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.score{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 46px;
+  font-family: 'Audiowide', cursive;
+  background: -webkit-linear-gradient(#FFC700, #CCFF00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.congratulations{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 48px;
+  background: -webkit-linear-gradient(#FFC700, #CCFF00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Buttons for switching the back of the cards are here< */
+#colorAlpha, #colorBravo{
+  position: absolute;
+  bottom: 10px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
+#colorAlpha{
+  background: radial-gradient(closest-side, #FF4ACC, #4EFAA7, #253AFC);
+  left: 325px;
+}
+
+#colorBravo{
+  background: radial-gradient(closest-side, #BF5AA3, #EDD606, #7B88FF);
+  left: 375px;
+}
+
+
+#findPair{/* Title first part */
+  margin: auto;
+  font-family: 'Audiowide', cursive;
+  position: relative;
+  width: 280px;
+  overflow-wrap: normal;
+  text-align: center;
+  font-size: 36px;
+  background: -webkit-linear-gradient(#001aff, #ff0037);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+#ZERO{/* Title second part */
+  font-size: 36px;
+  background: -webkit-linear-gradient(#CCFF00, #00FFFF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:0 0 1.5em #ff00f2;
+  -webkit-text-stroke-color: #B556C5;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+
+#pause{
+  width: 80px;
+  height: 80px;
+  background: url(../assets/Pause.png);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+}
+/* Topbar ends here */
+
+
+/* Playing Field starts here */
+#playingField{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 690px;
+  width: 100%;
+  align-content: center;
+
+}
+/* Image container's size */
+#imageContainer{ 
+  width: 90%;
+  height: 100%;
+  border-radius: 15px;
+}
+/* List of images that will run into a random function */
+.imageAllships{
+  margin: auto;
+  background: url(../assets/BackgroundImages/allships.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.image75lf{
+  margin: auto;
+  background: url(../assets/BackgroundImages/75lf.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageDesktop{
+  margin: auto;
+  background: url(../assets/BackgroundImages/desktop.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageGlass{
+  margin: auto;
+  background: url(../assets/BackgroundImages/glass.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageGlitchCity{
+  margin: auto;
+  background: url(../assets/BackgroundImages/glitchCity.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageVA{
+  margin: auto;
+  background: url(../assets/BackgroundImages/Jeu_VA-11HALL-A_2.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imagePixel{
+  margin: auto;
+  background: url(../assets/BackgroundImages/PixelCyberpunkAsusROG.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageRain{
+  margin: auto;
+  background: url(../assets/BackgroundImages/rain.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageRainCyber{
+  margin: auto;
+  background: url(../assets/BackgroundImages/rain_cyberpunk.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+.imageGalaxxy{
+  margin: auto;
+  background: url(../assets/BackgroundImages/Glaxxy.gif);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+/* End of the background lists */
+
+
+#gameOverlay{
+  background-color: rgba(58, 58, 58, 0.45);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 5px;
+  border-width: 2px;
+  border-style: double;
+  border-color:#B556C5;
+  box-shadow: 0 0 30px #ff00f2;
+}
+
+.gameBoard{
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+ 
+}
+
+.cards{
+  position: relative;
+  height: 22%;
+  width: 11%;
+  margin: 10px auto; 
+  color: #fff;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s
+}
+
+
+
+.cards:active{
+  transform: scale(.97);
+  transition: transform .2s;
+}
+
+.cards.flip{
+  transform: rotateY(180deg);
+}
+
+
+.front-face, .back-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front-face{
+  transform: rotateY(180deg);
+}
+
+.hideMatch{
+           
+            opacity: 0;
+            box-shadow: 0 0 100px #2bff00;
+            transition: opacity 4s linear;
+}
+
+/* Start Game Overlay and it's components starts here  */
+.startOverlay, #Gameover, #containwin {
+  position: absolute;  
+  z-index:5000;
+  background:linear-gradient(217deg, rgba(166, 0, 172, 0.90), rgba(0, 12, 117, 0.9) 90%);
+  min-width: 100%;
+  min-height: 900px ;
+  top: 0;
+}
+#containwin {
+ height: 900px;
+}
+
+.starting{
+  position: relative;
+  height: 100%;
+ 
+}
+
+.startOverlayOff{
+  display: none;
+}
+#startTitle{/* Title's first part */
+  margin: 50px auto 0;
+  position: relative;
+  width: 280px;
+  overflow-wrap: normal;
+  text-align: center;
+  font-size: 48px;
+  background: -webkit-linear-gradient(#00ccff, #ff0037);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ZERO{/* Title's second part */
+  font-size: 48px;
+  background: -webkit-linear-gradient(#CCFF00, #00FFFF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:0 0 1.5em #ff00f2;
+  -webkit-text-stroke-color: #B556C5;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+#hi-scores, #won{
+  font-size: 36px;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+  margin:20px auto;
+  background: -webkit-linear-gradient(#FFE600, #E20D73);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+#starNewGame{
+  display: block;
+  width: 480px;
+  margin: auto;
+  border-radius: 10px;
+  background: #15FDE1;
+  height: 82px;
+  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;;
+}
+
+.winner{
+  margin: 5px auto 0;
+  position: relative;
+  height: 600px;
+}
+#Endingimg{
+  width: 90%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+
+
+#Game{/* End title 's first part */
+  margin: 25px auto 50px;
+  position: relative;
+  width: 280px;
+  overflow-wrap: normal;
+  text-align: center;
+  font-size: 48px;
+  background: -webkit-linear-gradient(#DBFF00, #FF00C7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Over{/* End Title's second part */
+  font-size: 48px;
+  margin: 15px;
+  background: -webkit-linear-gradient(#DBFF00, #FF00C7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:0 0 1.5em #ff00f2;
+  -webkit-text-stroke-color: #B556C5;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+#resetGame,#resetGameOver{
+  display: block;
+  width: 480px;
+  margin: auto;
+  border-radius: 10px;
+  background:#8800e3;
+  color: #FFC700;
+  height: 82px;
+  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;;
+}
+
+.overlayOff{
+  display: none;
+}
+
+
+#timecontainer{
+  margin: auto;
+  background-color: #483939;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0,1);
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  width: 90%;
+  height: 50%;
+  border-radius: 10px;
+}
+/* Time bar */
+.timeprogress{
+  margin: auto;
+  background: -webkit-linear-gradient(1turn,#f00202, #A064DC 56.41%);
+  box-shadow: inset 0 0 20px rgb(0, 0, 0);
+  -moz-box-shadow:    inset 0 0 10px #000000; 
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.timeprogress-countdown{
+  margin: auto;
+  background: -webkit-linear-gradient(1turn,#f00202, #A064DC 56.41%);
+  box-shadow: inset 0 0 20px rgb(0, 0, 0);
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; 
+  animation: bartimer 500s;
+  transform-origin: left center;
+}
+
+@keyframes bartimer {
+  from{
+    transform: scaleX(100%);
+  }
+  to {
+    /* More performant than animating `width` */
+    transform: scaleX(0);
+  }
+  
+}

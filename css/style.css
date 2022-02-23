@@ -56,6 +56,7 @@ body{
   height: 31px;
   border-radius: 50%;
 }
+
 #colorAlpha{
   background: radial-gradient(closest-side, #FF4ACC, #4EFAA7, #253AFC);
   left: 325px;
@@ -229,12 +230,32 @@ body{
 }
 
 
-.front-face, .back-face{
+.front-face, .back-face, .back-face2{
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
+
+.back-face2{
+  visibility: hidden;
+}
+.back-face2-on{
+  visibility: visible;
+}
+
+.back-face-off{
+  visibility:hidden;
+  z-index: 100;
+}
+.back-face2-on{
+  visibility: visible;
+  z-index: 100;
+}
+
+
+
+
 
 .front-face{
   transform: rotateY(180deg);
@@ -244,7 +265,7 @@ body{
            
             opacity: 0;
             box-shadow: 0 0 100px #2bff00;
-            transition: opacity 4s linear;
+            transition: opacity 1s linear;
 }
 
 /* Start Game Overlay and it's components starts here  */
@@ -405,7 +426,12 @@ body{
   animation: bartimer 500s;
   transform-origin: left center;
 }
-
+.timeprogress2{
+  background: -webkit-linear-gradient(1turn,#D41B1B, #FAFF00 56.41%);
+}
+.timeprogress-pause{
+animation-play-state: paused;
+}
 @keyframes bartimer {
   from{
     transform: scaleX(100%);

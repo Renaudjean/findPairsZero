@@ -29,181 +29,217 @@
       <div class="cards" data-framework="apple">
         <img class="front-face" src="./CardsAssets/Apple-1.png" alt="Flipped apple card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="apple">
         <img class="front-face" src="./CardsAssets/Apple-1.png" alt="Flipped apple card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Banana">
         <img class="front-face" src="./CardsAssets/Banana-2.png" alt="Flipped Banana card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Banana">
         <img class="front-face" src="./CardsAssets/Banana-2.png" alt="Flipped Banana card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Cherry">
         <img class="front-face" src="./CardsAssets/Cherry-3.png" alt="Flipped cherry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Cherry">
         <img class="front-face" src="./CardsAssets/Cherry-3.png" alt="Flipped cherry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Glow-Berry">
         <img class="front-face" src="./CardsAssets/Glow-Berry-4.png" alt="Flipped Glow Berry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Glow-Berry">
         <img class="front-face" src="./CardsAssets/Glow-Berry-4.png" alt="Flipped Glow Berry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Grape">
         <img class="front-face" src="./CardsAssets/Grape-5.png" alt="Flipped Grape card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Grape">
         <img class="front-face" src="./CardsAssets/Grape-5.png" alt="Flipped Grape card">  
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Green-Grape">
         <img class="front-face" src="./CardsAssets/Green-Grape-6.png" alt="Flipped green grape card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Green-Grape">
         <img class="front-face" src="./CardsAssets/Green-Grape-6.png" alt="Flipped green grape card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Green-Apple">
         <img class="front-face" src="./CardsAssets/Green-Apple-7.png" alt="Flipped Green apple card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Green-Apple">
         <img class="front-face" src="./CardsAssets/Green-Apple-7.png" alt="Flipped Green apple card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Lemon">
         <img class="front-face" src="./CardsAssets/Lemon-8.png" alt="Flipped Lemon card"> 
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Lemon">
         <img class="front-face" src="./CardsAssets/Lemon-8.png" alt="Flipped Lemon card">
          <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+         <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Lime">
         <img class="front-face" src="./CardsAssets/Lime-9.png" alt="Flipped Lime card"> 
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
       
       <div class="cards" data-framework="Lime">
         <img class="front-face" src="./CardsAssets/Lime-9.png" alt="Flipped Lime card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
 
       <div class="cards" data-framework="Mango">
         <img class="front-face" src="./CardsAssets/Mango-10.png" alt="Flipped Mango card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
      
       <div class="cards" data-framework="Mango">
         <img class="front-face" src="./CardsAssets/Mango-10.png" alt="Flipped Mango card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
    
       <div class="cards" data-framework="Orange">
         <img class="front-face" src="./CardsAssets/Orange-the-color-11.png" alt="Flipped Orange card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Orange">
         <img class="front-face" src="./CardsAssets/Orange-the-color-11.png" alt="Flipped Orange card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
      
       <div class="cards" data-framework="Peach">
         <img class="front-face" src="./CardsAssets/Peach-12.png" alt="Flipped Peach card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Peach">
         <img class="front-face" src="./CardsAssets/Peach-12.png" alt="Flipped Peach card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Peach-light">
         <img class="front-face" src="./CardsAssets/Peach-light-13.png" alt="Flipped Peach light card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Peach-light">
         <img class="front-face" src="./CardsAssets/Peach-light-13.png" alt="Flipped Peach light card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
   
       <div class="cards" data-framework="Pear">
         <img class="front-face" src="./CardsAssets/Pear-14.png" alt="Flipped Pear card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
 
       <div class="cards" data-framework="Pear">
         <img class="front-face" src="./CardsAssets/Pear-14.png" alt="Flipped Pear card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Strawberry">
         <img class="front-face" src="./CardsAssets/Strawberry-15.png" alt="Flipped strawberry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Strawberry">
         <img class="front-face" src="./CardsAssets/Strawberry-15.png" alt="Flipped strawberry card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
    
       <div class="cards" data-framework="Grenade">
         <img class="front-face" src="./CardsAssets/Grenade-16.png" alt="Flipped Grenade card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Grenade">
         <img class="front-face" src="./CardsAssets/Grenade-16.png" alt="Flipped Grenade card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Mangoustan">
         <img class="front-face" src="./CardsAssets/Mangoustan-17.png" alt="Flipped Mangoustan card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Mangoustan">
         <img class="front-face" src="./CardsAssets/Mangoustan-17.png" alt="Flipped Mangoustan card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Watermelon">
         <img class="front-face" src="./CardsAssets/Watermelon-18.png" alt="Flipped Watermelon card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
       <div class="cards" data-framework="Watermelon">
         <img class="front-face" src="./CardsAssets/Watermelon-18.png" alt="Flipped Watermelon card">
         <img class="back-face" src="./CardsAssets/BackofCard.png" alt="Unflipped card">
+        <img class="back-face2" src="./CardsAssets/BackofCard2.png" alt="Unflipped card">
       </div>
     
   </section>  

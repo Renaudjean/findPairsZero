@@ -25,11 +25,13 @@ var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 console.log(date);
 let timeScore;
 let finalscore;
-
+let backface = document.querySelectorAll(".back-face");
+let backface2 = document.querySelectorAll(".back-face2");
 
 let cardFlipped = false;
 let boardlock = false;
-let firstCard, secondCard;
+let firstCard;
+let secondCard = null;
 let counter= 0;
 
 
@@ -43,7 +45,8 @@ function flipCard(){
     //This fixes the bug where rifle clickling will let the previous cards flip 
     if(boardlock) return;
     // this will fix a bug where clicking twice the card will remove the flip class and remain unflip
-    if( this === firstCard) return;!
+    if( this === firstCard) return;
+    if(secondCard !== null) return; 
     this.classList.add('flip');
     if(!cardFlipped){
         // first click
@@ -56,7 +59,6 @@ function flipCard(){
         //second click
         secondCard=this;
         checkForMatch();
-        
   }
 
   function checkForMatch(){
@@ -76,26 +78,23 @@ function disable(){
     console.log(counter);
     win();
     
-    const delayhiden= setTimeout(hideCard,2000);          
-    const delayreset= setTimeout (resetBoard, 3000);  
-  
+   setTimeout(()=>{hideCard(); resetBoard();}, 1000);   
     }    
 
-function hideCard(){
-
+    // Function Hides Cards by adding a class
+function hideCard(){    
     firstCard.classList.add("hideMatch");
     secondCard.classList.add("hideMatch");  
-    
 }
     
 function unflipCards(){
-        // This will unflip cards after timer runs out
+        // This will unflip cards after timer runs out by removing a class
         boardlock =true;
         setTimeout(() =>{
             firstCard.classList.remove('flip');
             secondCard.classList.remove('flip');
             resetBoard();
-        }, 1500);
+        }, 2500);
     }
 
     // This fixes a bug where clicking twice would remove 
@@ -120,22 +119,29 @@ let countdownEl = document.getElementById("Timer");
 let startGame = document.getElementById("starNewGame");
 let resetGame = document.getElementById("resetGame");
 let intervalId;
+let timerpause = false;
+let pausebutton = document.getElementById("pause");
+
 
 function updateCountdown(){
     const minutes = Math.floor(time/100);
     let seconds= time % 100;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     countdownEl.innerHTML = `${minutes}${seconds}`; 
+    if (timerpause === true) {
+        return;
+    }else{
     if (seconds > -1) {
      time--;
      
     }
-    if (time === 490) {
+    if (time === 0) {
         let GameOver= document.getElementById("Gameover");
         GameOver.classList.remove("overlayOff");
         
 
     }
+}
 };
 
 function finalCountdown(){ 
@@ -167,13 +173,21 @@ function pairCounter(){
     }
 }
 
+
 function win(){
     let endTrigger= document.getElementById("containwin")
     console.log(endTrigger)
-    if (counter === 3) {
-        endTrigger.classList.remove("overlayOff");
-        timeScore= document.getElementById("record");
-        timeScore= document.getElementById("")
+    if (counter === 2) {
+       var body =new FormData();
+       body.append("score", timeScore);
+       body.append("date", date);
+        fetch("./php/score.php", {
+           method: 'POST',
+           body
+       })
+       endTrigger.classList.remove("overlayOff");
+       timeScore= document.getElementById("record");
+       timeScore= document.getElementById("date")
         
      }
 }
@@ -182,10 +196,49 @@ function reset(){
     location.reload();
 }
 
-// All events on start button goes here 
+function colorswitchAlpha(){
+    backface.forEach( (b) => {
+        b.classList.toggle("back-face2-on");
+        b.classList.toggle("back-face-off");
+    })
+    backface2.forEach( (b) => {
+        b.classList.toggle("back-face2-on");
+    })
+    progressBar.classList.toggle("timeprogress2")
+}
+
+
+
+function colorswitchBravo(){
+    backface2.forEach( (b) => {
+        b.classList.toggle("back-face-2");
+        b.classList.toggle("back-face2-on");
+    })
+    progressBar.classList.toggle("timeprogress2")
+}
+
+function pauseAnimation(){
+    
+    var barCountdown = document.getElementById("countdownBar");
+    barCountdown.classList.toggle("timeprogress-pause");
+   
+}
+
+let colorswitchA = document.getElementById("colorAlpha");
+let colorswitchB = document.getElementById("colorBravo");
+let progressBar = document.getElementById("countdownBar")
+
+// All events on buttons goes here 
 startGame.addEventListener("click", finalCountdown);
 startGame.addEventListener("click", turnOffStart);
 startGame.addEventListener("click", barcountdown);
+
 resetGame.addEventListener("click",reset);
 resetGameOver.addEventListener("click",reset);
+ 
+colorswitchA.addEventListener("click", colorswitchAlpha);
+colorswitchB.addEventListener("click", colorswitchBravo);
+
+
+pausebutton.addEventListener("click", pauseAnimation);
 
